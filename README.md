@@ -1,3 +1,3 @@
-# opentelemetry-instrumentation-tachybase
+# opentelemetry-auto-instrumentations
 
-TachyBase 专属的 OpenTelemetry 插桩库
+TachyBase 专属的 OpenTelemetry 自动插桩库
