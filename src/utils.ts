@@ -33,7 +33,7 @@ import { GenericPoolInstrumentation } from '@opentelemetry/instrumentation-gener
 import { GraphQLInstrumentation } from '@opentelemetry/instrumentation-graphql';
 import { GrpcInstrumentation } from '@opentelemetry/instrumentation-grpc';
 import { HapiInstrumentation } from '@opentelemetry/instrumentation-hapi';
-import { HttpInstrumentation } from '@opentelemetry/instrumentation-http';
+import { HttpInstrumentation } from '@tachybase/opentelemetry-instrumentation-http';
 import { IORedisInstrumentation } from '@opentelemetry/instrumentation-ioredis';
 import { KafkaJsInstrumentation } from '@opentelemetry/instrumentation-kafkajs';
 import { KnexInstrumentation } from '@opentelemetry/instrumentation-knex';
@@ -111,7 +111,7 @@ const InstrumentationMap = {
   '@opentelemetry/instrumentation-graphql': GraphQLInstrumentation,
   '@opentelemetry/instrumentation-grpc': GrpcInstrumentation,
   '@opentelemetry/instrumentation-hapi': HapiInstrumentation,
-  '@opentelemetry/instrumentation-http': HttpInstrumentation,
+  '@tachybase/opentelemetry-instrumentation-http': HttpInstrumentation,
   '@opentelemetry/instrumentation-ioredis': IORedisInstrumentation,
   '@opentelemetry/instrumentation-kafkajs': KafkaJsInstrumentation,
   '@opentelemetry/instrumentation-knex': KnexInstrumentation,

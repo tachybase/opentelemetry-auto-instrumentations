@@ -70,7 +70,7 @@ export class HttpInstrumentation extends InstrumentationBase<HttpInstrumentation
   private _httpClientDurationHistogram!: Histogram;
 
   constructor(config: HttpInstrumentationConfig = {}) {
-    super('@opentelemetry/instrumentation-http', packageJson?.version, config);
+    super('@tachybase/opentelemetry-instrumentation-http', packageJson?.version, config);
     this._headerCapture = this._createHeaderCapture();
   }
 

@@ -1,6 +1,6 @@
 {
   "name": "@tachybase/opentelemetry-auto-instrumentations",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Metapackage of telemetry for TachyBase which bundles OpenTelemetry node core and instrumentations",
   "author": "TachyBase Team",
   "homepage": "https://git.daoyoucloud.com/TomyJan/opentelemetry-auto-instrumentations",
@@ -76,7 +76,7 @@
     "@opentelemetry/instrumentation-graphql": "^0.42.0",
     "@opentelemetry/instrumentation-grpc": "^0.52.0",
     "@opentelemetry/instrumentation-hapi": "^0.40.0",
-    "@opentelemetry/instrumentation-http": "^0.52.0",
+    "@tachybase/opentelemetry-instrumentation-http": "^0.0.1",
     "@opentelemetry/instrumentation-ioredis": "^0.42.0",
     "@opentelemetry/instrumentation-kafkajs": "^0.2.0",
     "@opentelemetry/instrumentation-knex": "^0.39.0",

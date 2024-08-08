@@ -15,7 +15,7 @@
  */
 
 import { diag } from '@opentelemetry/api';
-import { HttpInstrumentationConfig } from '@opentelemetry/instrumentation-http';
+import { HttpInstrumentationConfig } from '@tachybase/opentelemetry-instrumentation-http';
 import * as assert from 'assert';
 import * as sinon from 'sinon';
 import { getNodeAutoInstrumentations } from '../src';
@@ -41,13 +41,13 @@ describe('utils', () => {
       function applyCustomAttributesOnSpan() {}
 
       const instrumentations = getNodeAutoInstrumentations({
-        '@opentelemetry/instrumentation-http': {
+        '@tachybase/opentelemetry-instrumentation-http': {
           applyCustomAttributesOnSpan,
         },
       });
       const instrumentation = instrumentations.find(
         instr =>
-          instr.instrumentationName === '@opentelemetry/instrumentation-http'
+          instr.instrumentationName === '@tachybase/opentelemetry-instrumentation-http'
       ) as any;
       const configHttp = instrumentation._config as HttpInstrumentationConfig;
 
@@ -79,7 +79,7 @@ describe('utils', () => {
         assert.deepStrictEqual(
           new Set(instrumentations.map(i => i.instrumentationName)),
           new Set([
-            '@opentelemetry/instrumentation-http',
+            '@tachybase/opentelemetry-instrumentation-http',
             '@opentelemetry/instrumentation-aws-sdk',
             '@opentelemetry/instrumentation-nestjs-core',
           ])
@@ -123,7 +123,7 @@ describe('utils', () => {
         assert.deepStrictEqual(
           new Set(instrumentations.map(i => i.instrumentationName)),
           new Set([
-            '@opentelemetry/instrumentation-http',
+            '@tachybase/opentelemetry-instrumentation-http',
             '@opentelemetry/instrumentation-express',
           ])
         );
@@ -135,7 +135,7 @@ describe('utils', () => {
 
     it('should show error for none existing instrumentation', () => {
       const spy = sinon.stub(diag, 'error');
-      const name = '@opentelemetry/instrumentation-http2';
+      const name = '@tachybase/opentelemetry-instrumentation-http2';
       const instrumentations = getNodeAutoInstrumentations({
         // @ts-expect-error verify that wrong name works
         [name]: {
