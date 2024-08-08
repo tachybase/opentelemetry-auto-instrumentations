@@ -1,6 +1,6 @@
 {
   "name": "@tachybase/opentelemetry-auto-instrumentations",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Metapackage of telemetry for TachyBase which bundles OpenTelemetry node core and instrumentations",
   "author": "TachyBase Team",
   "homepage": "https://git.daoyoucloud.com/TomyJan/opentelemetry-auto-instrumentations",
@@ -105,7 +105,7 @@
     "@opentelemetry/resource-detector-gcp": "^0.29.10",
     "@opentelemetry/resources": "^1.24.0",
     "@opentelemetry/sdk-node": "^0.52.0",
-    "@tachybase/opentelemetry-instrumentation-http": "^0.1.0"
+    "@tachybase/opentelemetry-instrumentation-http": "^0.1.1"
   },
   "files": [
     "build/src/**/*.js",
