@@ -773,6 +773,8 @@ export class HttpInstrumentation extends InstrumentationBase<HttpInstrumentation
      * If a parent is required but not present, we use a `NoopSpan` to still
      * propagate context without recording it.
      */
+    // 修改 name 加上具体的 route
+    name = `${name} ${options.attributes?.[SEMATTRS_HTTP_ROUTE] ?? ''}`;
     const requireParent =
       options.kind === SpanKind.CLIENT
         ? this.getConfig().requireParentforOutgoingSpans

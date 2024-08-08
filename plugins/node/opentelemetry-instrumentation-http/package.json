@@ -1,6 +1,6 @@
 {
   "name": "@tachybase/opentelemetry-instrumentation-http",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "OpenTelemetry instrumentation for `node:http` and `node:https` http client and server modules for TachyBase",
   "author": "TachyBase Team",
   "homepage": "https://git.daoyoucloud.com/TomyJan/opentelemetry-auto-instrumentations/plugins/node/opentelemetry-instrumentation-http",
