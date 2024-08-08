@@ -774,7 +774,12 @@ export class HttpInstrumentation extends InstrumentationBase<HttpInstrumentation
      * propagate context without recording it.
      */
     // 修改 name 加上具体的 route
-    name = `${name} ${options.attributes?.[SEMATTRS_HTTP_ROUTE] ?? ''}`;
+    name = `${name} ${options.attributes?.[SEMATTRS_HTTP_ROUTE] ?? options.attributes?.['http.target'] ?? ''}`;
+    // 删除 url 中的 query
+    const queryIndex = name.indexOf('?');
+    if (queryIndex !== -1) {
+      name = name.slice(0, queryIndex);
+    }
     const requireParent =
       options.kind === SpanKind.CLIENT
         ? this.getConfig().requireParentforOutgoingSpans
