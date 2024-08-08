@@ -1,7 +1,15 @@
 {
     "cSpell.words": [
+        "fastify",
+        "kafkajs",
+        "memoizer",
         "Metapackage",
+        "nestjs",
+        "pino",
+        "prewatch",
         "Tachy",
-        "tachybase"
+        "tachybase",
+        "tada",
+        "undici"
     ]
 }

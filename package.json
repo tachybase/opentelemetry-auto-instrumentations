@@ -9,7 +9,8 @@
     "node": ">=14"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "main": "build/src/index.js",
   "types": "build/src/index.d.ts",
@@ -23,7 +24,7 @@
     "compile": "tsc -p .",
     "lint": "eslint . --ext .ts",
     "lint:fix": "eslint . --ext .ts --fix",
-    "precompile": "tsc --version && lerna run version:update --scope @opentelemetry/auto-instrumentations-node --include-dependencies",
+    "precompile": "tsc --version && lerna run version:update --include-dependencies",
     "prewatch": "npm run precompile",
     "prepublishOnly": "npm run compile",
     "tdd": "yarn test -- --watch-extensions ts --watch",
@@ -41,6 +42,8 @@
     "@types/mocha": "7.0.2",
     "@types/node": "18.6.5",
     "@types/sinon": "10.0.18",
+    "lerna": "6.6.2",
+    "lerna-changelog": "2.2.0",
     "mocha": "7.2.0",
     "nyc": "15.1.0",
     "rimraf": "5.0.5",
@@ -101,5 +104,22 @@
     "build/src/**/*.js",
     "build/src/**/*.js.map",
     "build/src/**/*.d.ts"
+  ],
+  "changelog": {
+    "labels": {
+      "breaking": ":boom: Breaking Change",
+      "bug": ":bug: Bug Fix",
+      "plugin-request": ":tada: New Plugins",
+      "enhancement": ":rocket: Enhancement",
+      "internal": ":house: Internal",
+      "documentation": ":memo: Documentation"
+    },
+    "ignoreCommitters": [
+      "renovate-bot",
+      "dependabot"
+    ]
+  },
+  "workspaces": [
+    "/*"
   ]
 }
