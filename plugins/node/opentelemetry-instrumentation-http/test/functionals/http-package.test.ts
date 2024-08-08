@@ -33,7 +33,7 @@ instrumentation.enable();
 instrumentation.disable();
 
 import * as http from 'http';
-import * as request from 'request-promise-native';
+import request from 'request-promise-native';
 import * as superagent from 'superagent';
 // Temporarily removed. See https://github.com/open-telemetry/opentelemetry-js/issues/3344
 // import * as got from 'got';

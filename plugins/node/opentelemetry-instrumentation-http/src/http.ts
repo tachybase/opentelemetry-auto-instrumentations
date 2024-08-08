@@ -49,7 +49,7 @@ import {
   Https,
 } from './types';
 import * as utils from './utils';
-import { VERSION } from './version';
+import packageJson from '../package.json';
 import {
   InstrumentationBase,
   InstrumentationNodeModuleDefinition,
@@ -70,7 +70,7 @@ export class HttpInstrumentation extends InstrumentationBase<HttpInstrumentation
   private _httpClientDurationHistogram!: Histogram;
 
   constructor(config: HttpInstrumentationConfig = {}) {
-    super('@opentelemetry/instrumentation-http', VERSION, config);
+    super('@opentelemetry/instrumentation-http', packageJson?.version, config);
     this._headerCapture = this._createHeaderCapture();
   }
 

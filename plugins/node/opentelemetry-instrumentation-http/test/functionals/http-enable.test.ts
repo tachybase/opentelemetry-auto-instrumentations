@@ -39,8 +39,8 @@ import {
   SEMATTRS_NET_PEER_PORT,
   SEMATTRS_NET_TRANSPORT,
 } from '@opentelemetry/semantic-conventions';
-import * as assert from 'assert';
-import * as nock from 'nock';
+import assert from 'assert';
+import nock from 'nock';
 import * as path from 'path';
 import { HttpInstrumentation } from '../../src/http';
 import { HttpInstrumentationConfig } from '../../src/types';
@@ -609,7 +609,7 @@ describe('HttpInstrumentation', () => {
         )}`, async () => {
           try {
             await httpRequest.get(arg);
-          } catch (error) {
+          } catch (error: any) {
             // request has been made
             // nock throw
             assert.ok(error.message.startsWith('Nock: No match for request'));
@@ -625,7 +625,7 @@ describe('HttpInstrumentation', () => {
         )}`, async () => {
           try {
             await httpRequest.get(arg as any);
-          } catch (error) {
+          } catch (error: any) {
             // request has been made
             // nock throw
             assert.ok(

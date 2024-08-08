@@ -390,7 +390,7 @@ describe('HttpInstrumentation Integration tests', () => {
           `${protocol}://localhost:${mockServerPort}/timeout`,
           { timeout: 1 }
         );
-      } catch (err) {
+      } catch (err: any) {
         assert.ok(err.message.startsWith('timeout'));
       }
 

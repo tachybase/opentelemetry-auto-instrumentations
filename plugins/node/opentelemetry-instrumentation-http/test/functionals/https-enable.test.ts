@@ -40,7 +40,7 @@ import {
 } from '@opentelemetry/semantic-conventions';
 import * as assert from 'assert';
 import * as fs from 'fs';
-import * as nock from 'nock';
+import nock from 'nock';
 import * as path from 'path';
 import { HttpInstrumentation } from '../../src/http';
 import { assertSpan } from '../utils/assertSpan';
@@ -473,7 +473,7 @@ describe('HttpsInstrumentation', () => {
         )}`, async () => {
           try {
             await httpsRequest.get(arg);
-          } catch (error) {
+          } catch (error: any) {
             // request has been made
             // nock throw
             assert.ok(error.message.startsWith('Nock: No match for request'));
@@ -489,7 +489,7 @@ describe('HttpsInstrumentation', () => {
         )}`, async () => {
           try {
             await httpsRequest.get(arg as any);
-          } catch (error) {
+          } catch (error: any) {
             // request has been made
             // nock throw
             assert.ok(
