@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "Metapackage of telemetry for TachyBase which bundles OpenTelemetry node core and instrumentations",
   "author": "TachyBase Team",
-  "homepage": "https://git.daoyoucloud.com/TomyJan/opentelemetry-auto-instrumentations",
+  "homepage": "https://git.daoyoucloud.com/tachybase/opentelemetry-auto-instrumentations",
   "license": "Apache-2.0",
   "engines": {
     "node": ">=14"
@@ -18,7 +18,7 @@
     ".": "./build/src/index.js",
     "./register": "./build/src/register.js"
   },
-  "repository": "https://git.daoyoucloud.com/TomyJan/opentelemetry-auto-instrumentations",
+  "repository": "https://git.daoyoucloud.com/tachybase/opentelemetry-auto-instrumentations",
   "scripts": {
     "clean": "rimraf build/*",
     "compile": "tsc -p .",
@@ -39,7 +39,7 @@
     "instrumentation"
   ],
   "bugs": {
-    "url": "https://git.daoyoucloud.com/TomyJan/opentelemetry-auto-instrumentations/issues"
+    "url": "https://git.daoyoucloud.com/tachybase/opentelemetry-auto-instrumentations/issues"
   },
   "peerDependencies": {
     "@opentelemetry/api": "^1.4.1"
